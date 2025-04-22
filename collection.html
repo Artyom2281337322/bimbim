@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Коллекции</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">Аудиотека</h1>
+      <nav class="nav">
+        <a href="main.html" class="nav-link">Мои треки</a>
+        <a href="collection.html" class="nav-link active">Коллекции</a>
+        <a href="profile.html" class="nav-link">Профиль</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="collections-container">
+    <div class="container">
+      <!-- Заголовок и кнопка создания -->
+      <div class="collections-header">
+        <h2>Мои коллекции</h2>
+        <button class="new-collection-btn">
+          <i class="fas fa-plus"></i> Новая коллекция
+        </button>
+      </div>
+
+      <!-- Сетка коллекций -->
+      <div class="collections-grid">
+        <!-- Коллекция 1 -->
+        <div class="collection-card">
+          <div class="collection-cover">
+            <img src="img/rock.png" alt="Обложка">
+            <span class="track-count">24 трека</span>
+          </div>
+          <div class="collection-info">
+            <h3>Лучший рок</h3>
+            <div class="collection-actions">
+              <button class="edit-btn"><i class="fas fa-pen"></i></button>
+              <button class="delete-btn"><i class="fas fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Коллекция 2 -->
+        <div class="collection-card">
+          <div class="collection-cover">
+            <img src="img/chill.png" alt="Обложка">
+            <span class="track-count">18 треков</span>
+          </div>
+          <div class="collection-info">
+            <h3>Вечерний чилл</h3>
+            <div class="collection-actions">
+              <button class="edit-btn"><i class="fas fa-pen"></i></button>
+              <button class="delete-btn"><i class="fas fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="main-footer">
+    <div class="container">
+      <p>© 2023 Аудиотека</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя аудиотека</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">Аудиотека</h1>
+      <nav class="nav">
+        <a href="main.html" class="nav-link active">Мои треки</a>
+        <a href="collection.html" class="nav-link">Коллекции</a>
+        <a href="profile.html" class="nav-link">Профиль</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Фильтры -->
+  <section class="filters">
+    <div class="container">
+      <div class="filters-row">
+        <div class="filter-group">
+          <label for="genre">Жанр:</label>
+          <select id="genre" class="filter-select">
+            <option value="all">Все</option>
+            <option value="rock">Рок</option>
+            <option value="pop">Поп</option>
+            <option value="electronic">Электроника</option>
+            <option value="hiphop">Хип-хоп</option>
+            <option value="jazz">Джаз</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="artist">Исполнитель:</label>
+          <select id="artist" class="filter-select">
+            <option value="all">Все</option>
+            <option value="queen">Queen</option>
+            <option value="beyonce">Beyoncé</option>
+            <option value="daft-punk">Daft Punk</option>
+            <option value="beatles">The Beatles</option>
+            <option value="kendrick">Kendrick Lamar</option>
+          </select>
+        </div>
+        <button class="filter-btn">Применить</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Сетка треков -->
+  <div class="tracks-grid">
+    <div class="container">
+      <!-- Трек 1 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/ComeTogheter.png" alt="Abbey Road" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Come Together</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Рок</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 2 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/Eleonore.png" alt="Revolver" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Eleanor Rigby</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Поп-рок</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 3 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/Lucy.png" alt="Sgt. Pepper" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Lucy in the Sky</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Психоделика</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 4 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/While.png" alt="White Album" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">While My Guitar</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Блюз-рок</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 5 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/LetItBe.png" alt="Let It Be" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Let It Be</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Рок-баллада</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/ComeTogheter.png" alt="Abbey Road" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Come Together</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Рок</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 2 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/Eleonore.png" alt="Revolver" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Eleanor Rigby</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Поп-рок</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 3 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/Lucy.png" alt="Sgt. Pepper" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Lucy in the Sky</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Психоделика</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 4 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/While.png" alt="White Album" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">While My Guitar</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Блюз-рок</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Трек 5 -->
+      <div class="track-card">
+        <div class="track-cover-container">
+          <img src="img/LetItBe.png" alt="Let It Be" class="track-cover">
+        </div>
+        <div class="track-info">
+          <h3 class="track-title">Let It Be</h3>
+          <p class="track-artist">The Beatles</p>
+          <p class="track-genre">Рок-баллада</p>
+          <div class="track-actions">
+            <button class="play-btn">▶</button>
+            <div class="add-to-collection">
+              <i class="fas fa-plus"></i>
+              <span class="tooltip">Добавить в коллекцию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <!-- Подвал -->
+  <footer class="main-footer">
+    <div class="container">
+      <p>© 2025 Моя аудиотека</p>
+    </div>
+  </footer>
+</body>
+</html>

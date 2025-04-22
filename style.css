@@ -1,0 +1,666 @@
+/* Базовые стили + градиент */
+:root {
+    --purple-gradient: linear-gradient(135deg, #8a2be2, #9932cc, #da70d6);
+    --purple-dark: #6a1b9a;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .auth-container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    font-size: 26px;
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Чтобы padding не влиял на ширину */
+  }
+  
+  .form-group input:focus {
+    border-color: #8a2be2;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
+  }
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    background: var(--purple-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #9932cc, #8a2be2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(154, 50, 204, 0.3);
+  }
+  
+  .auth-links {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+  }
+  
+  .auth-links a {
+    color: #8a2be2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .auth-links a:hover {
+    color: #6a1b9a;
+    text-decoration: underline;
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .form-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  /* Чекбокс */
+  input[type="checkbox"] {
+    accent-color: #8a2be2;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 480px) {
+    .auth-container {
+      margin: 20px 15px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  
+    .auth-container h1 {
+      font-size: 22px;
+    }
+  
+    .form-group input, button {
+      padding: 12px;
+    }
+  }
+
+  /*Main*/
+  :root {
+    --purple-gradient: linear-gradient(135deg, #8a2be2, #9932cc);
+    --purple-dark: #6a1b9a;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Общие стили */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-gray);
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Шапка */
+  .main-header {
+    background: white;
+    box-shadow: var(--card-shadow);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: 24px;
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: #8a2be2;
+  }
+  
+  /* Фильтры (уже + в строку) */
+  .filters {
+    background: white;
+    padding: 15px 0;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    max-width: 600px; /* Уже, чем контейнер */
+  }
+  
+  .filters-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .filter-btn {
+    background: var(--purple-gradient);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .filter-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Сетка треков (адаптивная версия для всех экранов) */
+  .tracks-grid {
+    padding: 20px 0;
+  }
+  
+  .tracks-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .track-card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .track-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .track-cover-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .track-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .track-info {
+    width: 100%;
+  }
+  
+  .track-title {
+    margin: 5px 0;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .track-artist, .track-genre {
+    margin: 3px 0;
+    color: #666;
+    font-size: 13px;
+  }
+  
+  .play-btn {
+    background: var(--purple-gradient);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: transform 0.2s;
+    display: flex;          /* Добавляем flex */
+    align-items: center;    /* Выравниваем по вертикали */
+    justify-content: center; /* Выравниваем по горизонтали */
+    padding-left: 2px;      /* Корректируем позицию символа ▶ */
+  }
+  .play-btn::before {
+    content: "▶";
+    display: block;
+    margin-left: 13px;
+  }
+  
+  
+  .play-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Подвал */
+  .main-footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    color: #666;
+  }
+  /* Стили для иконки "+" и подсказки */
+  .track-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .play-btn {
+    background: var(--purple-gradient);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2px;
+    transition: transform 0.2s;
+  }
+  
+  .add-to-collection {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .add-to-collection i {
+    color: white;
+    font-size: 12px;
+  }
+  
+  .add-to-collection:hover {
+    background: var(--purple-dark);
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  
+  .add-to-collection:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  /*Profile*/
+  
+/* Стили профиля */
+.profile-container {
+    padding: 30px 0;
+  }
+  
+  .profile-info {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .avatar-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+  }
+  
+  .avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .avatar-upload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--purple-gradient);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .avatar-upload input {
+    display: none;
+  }
+  
+  .avatar-upload i {
+    color: white;
+    font-size: 18px;
+  }
+  
+  .username {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  
+  .user-email {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-number {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    color: #8a2be2;
+  }
+  
+  .stat-label {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .edit-profile {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .edit-profile h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .profile-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .profile-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .profile-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  .save-btn {
+    background: var(--purple-gradient);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .stats-section {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .profile-info, .edit-profile {
+      padding: 20px;
+    }
+  }
+
+
+  /*collection*/
+  /* Стили для страницы коллекций */
+.collections-container {
+    padding: 30px 0;
+  }
+  
+  .collections-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .new-collection-btn {
+    background: var(--purple-gradient);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s;
+  }
+  
+  .new-collection-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .collection-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .collection-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .collection-cover {
+    position: relative;
+    height: 150px;
+  }
+  
+  .collection-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .track-count {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+  }
+  
+  .collection-info {
+    padding: 15px;
+  }
+  
+  .collection-info h3 {
+    margin: 0 0 10px;
+    color: var(--text-color);
+  }
+  
+  .collection-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;           /* Добавляем flex */
+    align-items: center;     /* Вертикальное выравнивание */
+    justify-content: center; /* Горизонтальное выравнивание */
+    padding: 0;              /* Убираем внутренние отступы */
+  }
+  
+  /* Дополнительно для иконок */
+  .edit-btn i,
+  .delete-btn i {
+    margin: 0;               /* Убираем отступы у иконок */
+    font-size: 14px;         /* Оптимальный размер */
+    line-height: 1;          /* Убираем лишнее пространство */
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .collections-header {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+  
+    .collections-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .btn-login a,
+  .btn-register a{
+    text-decoration: none;
+    color: white;
+  }
+  

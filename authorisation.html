@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Войти в аккаунт</h1>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="login-email">Email*</label>
+                <input type="email" id="login-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Пароль*</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" name="remember"> Запомнить меня
+                </label>
+                <a href="/forgot-password">Забыли пароль?</a>
+            </div>
+            <button type="submit" class="btn-login"> <a href="main.html">Войти </a></button>
+        </form>
+        <div class="auth-links">
+            <p>Нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
+        </div>
+    </div>
+</body>
+</html>
